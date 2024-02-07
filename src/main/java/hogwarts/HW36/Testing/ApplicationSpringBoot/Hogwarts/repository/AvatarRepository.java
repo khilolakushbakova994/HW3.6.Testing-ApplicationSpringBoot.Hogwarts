@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface AvatarRepository extends JpaRepository<Avatar, Long> {
-    Avatar findAvatarById (Long studentId);
+     //Avatar findAvatarById (Long studentId);
 }

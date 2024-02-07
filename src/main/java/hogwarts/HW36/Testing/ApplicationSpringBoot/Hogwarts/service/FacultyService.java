@@ -30,6 +30,7 @@ public class FacultyService {
     }
 
 
+
     public Faculty changeFacultyInfo(Faculty faculty) {
         return facultyRepository.save(faculty);
     }

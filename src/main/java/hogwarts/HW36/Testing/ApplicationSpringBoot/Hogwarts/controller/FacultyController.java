@@ -35,7 +35,7 @@ public class FacultyController {
         return ResponseEntity.ok(faculty);
     }
 
-    @PutMapping
+    @PutMapping ( )
     public ResponseEntity<Faculty> changeFacultyInfo(@RequestBody Faculty faculty) {
         Faculty changedFaculty = facultyService.changeFacultyInfo(faculty);
         if (changedFaculty == null) {
@@ -67,9 +67,5 @@ public class FacultyController {
         return ResponseEntity.ok( facultyService.findAllFaculties());
     }
 
-    //@GetMapping("{id-faculty}")
-    //public ResponseEntity<Collection<Student>> findAllByFaculty (@PathVariable Long id) {
-    //    return ResponseEntity.ok(facultyService.findStudentByFaculty(id));
-   // }
 
 }

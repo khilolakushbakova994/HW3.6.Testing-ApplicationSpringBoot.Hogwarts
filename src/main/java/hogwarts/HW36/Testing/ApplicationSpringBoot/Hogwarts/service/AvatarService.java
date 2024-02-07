@@ -65,7 +65,7 @@ public class AvatarService {
     }
 
     public Avatar findAvatarById(Long studentId) {
-        return avatarRepository.findAvatarById(studentId);
+        return avatarRepository.findById(studentId).orElse(null);
     }
 
     private byte[] generateImagePreview(Path filePath) throws IOException {

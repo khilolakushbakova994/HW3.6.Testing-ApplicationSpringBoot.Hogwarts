@@ -35,9 +35,9 @@ public class AvatarController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping(value = "/{studentId}/image/preview")
-    public ResponseEntity<byte[]> downloadImage(@PathVariable Long studentId) {
-        Avatar avatar = avatarService.findAvatarById(studentId);
+    @GetMapping(value = "/{id}/image/preview")
+    public ResponseEntity<byte[]> downloadImage(@PathVariable Long id) {
+        Avatar avatar = avatarService.findAvatarById(id);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.parseMediaType(avatar.getMediaType()));
@@ -48,9 +48,9 @@ public class AvatarController {
 
     }
 
-    @GetMapping(value = "/{studentId}/image-from-file")
-    public void downloadAvatar(@PathVariable Long studentId, HttpServletResponse response) throws IOException {
-        Avatar avatar = avatarService.findAvatarById(studentId);
+    @GetMapping(value = "/{id}/image-from-file")
+    public void downloadAvatar(@PathVariable Long id, HttpServletResponse response) throws IOException {
+        Avatar avatar = avatarService.findAvatarById(id);
 
         Path path = Path.of(avatar.getFilePath());
 
