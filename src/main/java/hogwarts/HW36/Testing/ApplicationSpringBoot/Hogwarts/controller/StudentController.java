@@ -59,7 +59,7 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getAllStudents());
     }
 
-    @GetMapping("/search-age")
+    @GetMapping("/search-age/{age}")
     public Collection<Student> findStudentByAge(@PathVariable Integer age) {
         return studentService.findStudentByAge(age);
     }
