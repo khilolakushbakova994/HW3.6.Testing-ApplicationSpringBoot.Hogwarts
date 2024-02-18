@@ -16,6 +16,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class StudentControllerTest {
+//    @Autowired
+//    private FacultyRepository facultyRepository;
+//    @Autowired
+//    private StudentRepository studentRepository;
+//
+//    @BeforeEach
+//    private void clear(){
+//        facultyRepository.deleteAll();
+//        studentRepository.deleteAll();
+//    }
+    //надо весь этот код добавить , чтоб вычищал БД
     @LocalServerPort
     private int port;
 
